@@ -65,7 +65,7 @@ int test_pugixml() {
   return 0;
 }
 
-//#include <curl/curl.h>
+#include <curl/curl.h>
 void test_curl() {
   #ifdef LIBCURL_VERSION
   CURL *curl;

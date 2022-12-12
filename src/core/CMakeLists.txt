@@ -42,7 +42,7 @@ target_link_libraries(${NAME}
         ## - Hier kann man pre-compiled Binaries laden fuer jede Platform
         ##   - https://curl.se/windows/
         zlib
-#        libcurl
+        libcurl
 
         ## TODO: CEF oder WebView(2) einbinden
 )
