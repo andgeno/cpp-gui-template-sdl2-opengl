@@ -84,11 +84,23 @@ void test_curl() {
   #endif
 }
 
+//#include "include/cef_browser.h"
+//#include "include/cef_app.h"
+void test_cef() {
+//  CefRefPtr<CefClient> ptr;
+//
+//  CefMainArgs args;
+//  CefSettings settings;
+//
+//  CefInitialize(args, settings, nullptr, nullptr);
+}
+
 void tests() {
   test_sqlite3();
   test_json();
   test_pugixml();
   test_curl();
+  test_cef();
 }
 // =================================================================================================
 // == GENO TESTS: END
