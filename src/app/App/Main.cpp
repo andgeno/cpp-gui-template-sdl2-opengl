@@ -32,39 +32,39 @@ void test_sqlite3() {
   sqlite3_close(db);
 }
 
-//#include <nlohmann/json.hpp>
-//using json = nlohmann::json;
-//void test_json() {
-//  json ex1 = json::parse(R"(
-//    {
-//      "pi": 3.141,
-//      "happy": true
-//    }
-//  )");
-//
-//  std::cout << "json: " << ex1 << std::endl;
-//}
-//
-//#include "pugixml.hpp"
-//int test_pugixml() {
-//  pugi::xml_document doc;
-//  pugi::xml_parse_result result = doc.load_file("xgconsole.xml");
-//  if (!result) {
-//    return -1;
-//  }
-//
-//  for (pugi::xml_node tool: doc.child("Profile").child("Tools").children("Tool"))
-//  {
-//      int timeout = tool.attribute("Timeout").as_int();
-//
-//      if (timeout > 0) {
-//        std::cout << "Tool " << tool.attribute("Filename").value() << " has timeout " << timeout
-//                  << "\n";
-//      }
-//  }
-//
-//  return 0;
-//}
+#include <nlohmann/json.hpp>
+using json = nlohmann::json;
+void test_json() {
+  json ex1 = json::parse(R"(
+    {
+      "pi": 3.141,
+      "happy": true
+    }
+  )");
+
+  std::cout << "json: " << ex1 << std::endl;
+}
+
+#include "pugixml.hpp"
+int test_pugixml() {
+  pugi::xml_document doc;
+  pugi::xml_parse_result result = doc.load_file("xgconsole.xml");
+  if (!result) {
+    return -1;
+  }
+
+  for (pugi::xml_node tool: doc.child("Profile").child("Tools").children("Tool"))
+  {
+      int timeout = tool.attribute("Timeout").as_int();
+
+      if (timeout > 0) {
+        std::cout << "Tool " << tool.attribute("Filename").value() << " has timeout " << timeout
+                  << "\n";
+      }
+  }
+
+  return 0;
+}
 
 #include <curl/curl.h>
 void test_curl() {
@@ -100,8 +100,8 @@ void test_cef() {
 
 void tests() {
   test_sqlite3();
-//  test_json();
-//  test_pugixml();
+  test_json();
+  test_pugixml();
   test_curl();
   test_cef();
 }

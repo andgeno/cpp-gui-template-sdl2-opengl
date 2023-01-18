@@ -20,6 +20,8 @@ target_link_libraries(${NAME}
 
 
        sqlite3
+        nlohmann_json::nlohmann_json
+        pugixml
         libcurl
 
 

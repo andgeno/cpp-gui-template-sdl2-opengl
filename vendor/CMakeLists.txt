@@ -76,3 +76,19 @@ FetchContent_Declare(
   GIT_TAG cd95ee9f771361acf241629d2fe5507e308082a2 ## Tag "curl-7_86_0"
 )
 add_subdirectory(curl)
+
+FetchContent_Declare(
+  json
+  GIT_REPOSITORY "https://github.com/nlohmann/json.git"
+  GIT_TAG bc889afb4c5bf1c0d8ee29ef35eaaf4c8bef8a5d ## Tag "v3.11.2"
+)
+set(JSON_BuildTests OFF CACHE INTERNAL "")
+set(JSON_Install OFF CACHE INTERNAL "")
+add_subdirectory(json)
+
+FetchContent_Declare(
+  pugixml
+  GIT_REPOSITORY "https://github.com/zeux/pugixml.git"
+  GIT_TAG a0e064336317c9347a91224112af9933598714e9 ## Tag "v1.13"
+)
+add_subdirectory(pugixml)
