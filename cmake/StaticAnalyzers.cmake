@@ -2,7 +2,10 @@ if (NOT CMAKE_BUILD_TYPE STREQUAL "Release")
   find_program(CLANGTIDY clang-tidy)
   if (CLANGTIDY)
     message(STATUS "Using clang-tidy")
+
+    ## NOTE: Cannot be used on my machines for unknown reasons :(
 #    set(CMAKE_CXX_CLANG_TIDY "${CLANGTIDY};-extra-arg=-Wno-unknown-warning-option")
+
   else ()
     message(WARNING "clang-tidy requested but executable not found")
   endif ()

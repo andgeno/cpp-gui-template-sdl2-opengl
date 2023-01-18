@@ -70,6 +70,13 @@ add_subdirectory(sqlite3)
 #)
 #add_subdirectory(zlib)
 
+
+
+
+
+
+
+
 FetchContent_Declare(
   curl
   GIT_REPOSITORY "https://github.com/curl/curl.git"
