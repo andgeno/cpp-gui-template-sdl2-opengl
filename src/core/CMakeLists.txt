@@ -14,7 +14,7 @@ target_link_libraries(${NAME}
         project_warnings
     PUBLIC
         spdlog
-        SDL2::SDL2
+        SDL2::SDL2-static
         glad
         imgui
 

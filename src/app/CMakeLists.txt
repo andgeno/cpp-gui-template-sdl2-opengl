@@ -9,7 +9,7 @@ add_executable(${NAME} App/Main.cpp)
 if (WIN32)
   add_custom_command(TARGET ${NAME} POST_BUILD
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-    $<TARGET_FILE:SDL2::SDL2>
+    $<TARGET_FILE:SDL2::SDL2-static>
     $<TARGET_FILE:zlib>
     $<TARGET_FILE_DIR:${NAME}>)
 endif ()
