@@ -92,3 +92,19 @@ FetchContent_Declare(
   GIT_TAG a0e064336317c9347a91224112af9933598714e9 ## Tag "v1.13"
 )
 add_subdirectory(pugixml)
+
+#FetchContent_Declare(
+#  cef
+#  ## Original Repo: https://bitbucket.org/chromiumembedded/cef/wiki/BranchesAndBuilding
+#  GIT_REPOSITORY "https://github.com/chromiumembedded/cef.git"
+#  GIT_TAG cd5e37ab62a1256f0b8ab20920f044d5fcad4ddf # Branch "5414"; Chromium Version 109, Nov 2022
+#)
+add_subdirectory(cef)
+
+
+
+
+
+
+
+
