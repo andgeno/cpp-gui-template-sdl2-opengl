@@ -70,12 +70,7 @@ add_subdirectory(sqlite3)
 #)
 #add_subdirectory(zlib)
 
-
-
-
-
-
-
+add_subdirectory(openssl)
 
 FetchContent_Declare(
   curl

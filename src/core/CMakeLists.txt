@@ -22,6 +22,9 @@ target_link_libraries(${NAME}
         nlohmann_json::nlohmann_json
         pugixml
 
+        ## TODO: ninja: error: 'vendor/openssl/openssl/lib/libssl.', needed by 'src/app/App.exe', missing and no known rule to make it
+#        OpenSSL::SSL
+
         ## NOTE:
         ## - libcurl ist ein C Project und wird mit autoconf und nmake gebaut
         ## - Es gibt einen C++ wrapper curlpp
@@ -42,6 +45,7 @@ target_link_libraries(${NAME}
         ## - Hier kann man pre-compiled Binaries laden fuer jede Platform
         ##   - https://curl.se/windows/
 #        zlib
+
         libcurl
 
         ## TODO: CEF oder WebView(2) einbinden
