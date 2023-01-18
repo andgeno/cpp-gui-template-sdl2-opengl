@@ -12,3 +12,15 @@ target_compile_features(${NAME} PRIVATE cxx_std_20)
 target_link_libraries(${NAME}
   PRIVATE project_warnings
   PUBLIC spdlog SDL2::SDL2 glad imgui)
+  PUBLIC
+        spdlog SDL2::SDL2
+        glad
+        imgui
+
+
+
+       sqlite3
+        libcurl
+
+
+        )

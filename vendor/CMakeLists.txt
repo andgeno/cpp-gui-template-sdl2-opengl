@@ -41,3 +41,38 @@ FetchContent_Declare(
   GIT_TAG v1.11.0
 )
 add_subdirectory(spdlog)
+
+
+
+
+
+
+
+
+
+
+
+
+FetchContent_Declare(
+  sqlite3
+  URL "https://sqlite.org/2022/sqlite-amalgamation-3400000.zip"
+  URL_HASH SHA256=7c23eb51409315738c930a222cf7cd41518ae5823c41e60a81b93a07070ef22a
+  DOWNLOAD_NO_EXTRACT false
+  DOWNLOAD_EXTRACT_TIMESTAMP true
+  TLS_VERIFY true
+)
+add_subdirectory(sqlite3)
+
+#FetchContent_Declare(
+#  zlib
+#  GIT_REPOSITORY "https://github.com/madler/zlib.git"
+#  GIT_TAG 04f42ceca40f73e2978b50e93806c2a18c1281fc ## Tag "v1.2.13"
+#)
+#add_subdirectory(zlib)
+
+FetchContent_Declare(
+  curl
+  GIT_REPOSITORY "https://github.com/curl/curl.git"
+  GIT_TAG cd95ee9f771361acf241629d2fe5507e308082a2 ## Tag "curl-7_86_0"
+)
+add_subdirectory(curl)
